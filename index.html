@@ -1507,7 +1507,21 @@
 
     </div>
 
-
+<script>
+        // Disable the F12 key (Inspect Element)
+        window.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'C' || 'I') || (e.cmdKey && e.OptionKey && e.key === 'C' || 'I')) {
+                e.preventDefault();
+                // alert('Inspect Element is disabled on this page.');
+            }
+        });
+        
+        // Disable right-click
+        window.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            // alert('Right-click is disabled on this page.');
+        });
+</script>
 
 </body>
 
